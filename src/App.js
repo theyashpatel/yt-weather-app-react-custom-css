@@ -1,5 +1,6 @@
 import hotBg from "./assets/hot.jpg";
 import coldBg from "./assets/cold.jpg";
+import Descriptions from "./components/Descriptions";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </div>
 
           {/* bottom description */}
+          <Descriptions />
         </div>
       </div>
     </div>
