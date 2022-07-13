@@ -7,7 +7,17 @@ const getFormattedWeatherData = async (city, units = "metric") => {
     .then((res) => res.json())
     .then((data) => data);
 
-  console.log(data);
+  const {
+    weather,
+    main: { temp, feels_like, temp_min, temp_max, pressure, humidity },
+    wind: { speed },
+    sys: { country },
+    name,
+  } = data;
+
+  const { description, icon } = weather[0];
+
+  return {};
 };
 
 export { getFormattedWeatherData };
